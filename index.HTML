@@ -1,0 +1,2386 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>СТАЛЬ — сварка и металлоконструкции</title>
+
+<meta name="description"
+content="Сварка и изготовление металлоконструкций под заказ в Кыргызстане. Ворота, навесы, заборы, лестницы, каркасы и другие конструкции.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+   ========================================================= */
+
+:root{
+  --bg:#17191a;
+  --surface:#222526;
+  --surface2:#292d2e;
+  --line:#383d3f;
+
+  --text:#f3f1eb;
+  --muted:#9da4a6;
+
+  --orange:#ff7a1a;
+  --orange-hover:#ff913f;
+
+  --green:#55c878;
+  --red:#ff7777;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.55;
+}
+
+a{
+  color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+.container{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.section{
+  padding:85px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+.logo{
+  font-family:"Bebas Neue",sans-serif;
+  letter-spacing:.02em;
+}
+
+h2{
+  font-size:clamp(36px,5vw,55px);
+  line-height:1;
+}
+
+.eyebrow{
+  display:inline-block;
+  color:var(--orange);
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:10px;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(23,25,26,.94);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+.logo{
+  font-size:32px;
+  text-decoration:none;
+}
+
+.logo span{
+  color:var(--orange);
+}
+
+nav ul{
+  display:flex;
+  gap:28px;
+  list-style:none;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--text);
+}
+
+.nav-button{
+  background:var(--orange);
+  color:#111;
+
+  padding:11px 18px;
+
+  border-radius:4px;
+
+  text-decoration:none;
+
+  font-size:14px;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:50px;
+
+  padding:0 24px;
+
+  border-radius:4px;
+
+  border:1px solid transparent;
+
+  font-size:15px;
+  font-weight:800;
+
+  text-decoration:none;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.button-primary{
+  background:var(--orange);
+  color:#151515;
+}
+
+.button-primary:hover{
+  background:var(--orange-hover);
+  transform:translateY(-1px);
+}
+
+.button-outline{
+  background:transparent;
+  border-color:var(--line);
+  color:var(--text);
+}
+
+.button-outline:hover{
+  border-color:var(--orange);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+  min-height:680px;
+
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+
+  align-items:center;
+
+  gap:60px;
+}
+
+.hero h1{
+  font-size:clamp(55px,8vw,96px);
+  line-height:.9;
+
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--orange);
+}
+
+.hero-description{
+  color:var(--muted);
+
+  max-width:650px;
+
+  font-size:18px;
+
+  margin-bottom:32px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.hero-art{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-art svg{
+  width:min(100%,430px);
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services{
+  border-top:1px solid var(--line);
+}
+
+.section-title{
+  max-width:700px;
+  margin-bottom:42px;
+}
+
+.section-title p{
+  margin-top:14px;
+}
+
+.service-list{
+  border-top:1px solid var(--line);
+}
+
+.service{
+  display:grid;
+  grid-template-columns:80px 260px 1fr;
+
+  gap:25px;
+
+  padding:30px 0;
+
+  border-bottom:1px solid var(--line);
+}
+
+.service-number{
+  color:var(--orange);
+
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:26px;
+}
+
+.service h3{
+  font-size:29px;
+}
+
+.service p{
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   ADVANTAGES
+   ========================================================= */
+
+.advantages{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  border:1px solid var(--line);
+  border-radius:5px;
+
+  overflow:hidden;
+}
+
+.advantage{
+  padding:30px;
+  border-right:1px solid var(--line);
+}
+
+.advantage:last-child{
+  border-right:none;
+}
+
+.advantage-number{
+  color:var(--orange);
+
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:38px;
+
+  margin-bottom:8px;
+}
+
+.advantage h3{
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.advantage p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.process-box{
+  background:var(--surface);
+
+  border:1px solid var(--line);
+
+  border-radius:5px;
+
+  overflow:hidden;
+}
+
+.process-header{
+  padding:30px 30px 22px;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.step{
+  padding:30px;
+
+  border-right:1px solid var(--line);
+}
+
+.step:last-child{
+  border-right:none;
+}
+
+.step-number{
+  color:var(--orange);
+
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:38px;
+
+  margin-bottom:8px;
+}
+
+.step h3{
+  font-size:23px;
+  margin-bottom:8px;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact{
+  border-top:1px solid var(--line);
+}
+
+.contact-grid{
+  display:grid;
+
+  grid-template-columns:.85fr 1.15fr;
+
+  gap:70px;
+
+  align-items:start;
+}
+
+.contact-info h2{
+  margin-bottom:18px;
+}
+
+.contact-info > p{
+  color:var(--muted);
+
+  margin-bottom:30px;
+}
+
+.contact-item{
+  margin-bottom:18px;
+}
+
+.contact-item small{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  margin-bottom:3px;
+}
+
+.contact-item strong{
+  font-size:16px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-card{
+  background:var(--surface);
+
+  border:1px solid var(--line);
+
+  border-radius:6px;
+
+  padding:30px;
+}
+
+.form-card h3{
+  font-size:32px;
+
+  margin-bottom:5px;
+}
+
+.form-description{
+  color:var(--muted);
+
+  font-size:14px;
+
+  margin-bottom:25px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+label{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:13px;
+  font-weight:600;
+
+  margin-bottom:6px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+
+  min-height:48px;
+
+  padding:12px 14px;
+
+  background:#191c1d;
+
+  color:var(--text);
+
+  border:1px solid var(--line);
+
+  border-radius:4px;
+
+  outline:none;
+}
+
+textarea{
+  min-height:115px;
+  resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--orange);
+
+  box-shadow:0 0 0 2px rgba(255,122,26,.12);
+}
+
+.checkbox{
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:9px;
+
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+.checkbox input{
+  width:17px;
+  min-height:17px;
+  margin-top:1px;
+}
+
+.checkbox a{
+  color:var(--orange);
+}
+
+.form-status{
+  min-height:22px;
+
+  font-size:14px;
+  font-weight:600;
+}
+
+.form-status.ok{
+  color:var(--green);
+}
+
+.form-status.error{
+  color:var(--red);
+}
+
+
+/* =========================================================
+   WORKERS
+   ========================================================= */
+
+.workers{
+  background:var(--surface);
+
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.workers-grid{
+  display:grid;
+
+  grid-template-columns:1fr .9fr;
+
+  gap:60px;
+
+  align-items:center;
+}
+
+.workers h2{
+  font-size:clamp(42px,5vw,62px);
+
+  margin-bottom:16px;
+}
+
+.workers-description{
+  color:var(--muted);
+
+  max-width:600px;
+
+  margin-bottom:25px;
+}
+
+.worker-form{
+  background:var(--bg);
+
+  border:1px solid var(--line);
+
+  border-radius:6px;
+
+  padding:28px;
+}
+
+
+/* =========================================================
+   PRIVACY
+   ========================================================= */
+
+.privacy{
+  border-top:1px solid var(--line);
+}
+
+.privacy-content{
+  max-width:800px;
+}
+
+.privacy h2{
+  margin-bottom:12px;
+}
+
+.privacy h3{
+  font-size:22px;
+  margin:30px 0 8px;
+}
+
+.privacy p,
+.privacy li{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.privacy ul{
+  padding-left:20px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+  border-top:1px solid var(--line);
+
+  padding:30px 0;
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+.footer-content{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+
+/* =========================================================
+   MOBILE CTA
+   ========================================================= */
+
+.mobile-cta{
+  display:none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
+
+  .hero{
+    grid-template-columns:1fr;
+
+    padding-top:60px;
+
+    min-height:auto;
+  }
+
+  .hero-art{
+    order:-1;
+  }
+
+  .hero-art svg{
+    max-width:280px;
+  }
+
+  .service{
+    grid-template-columns:70px 220px 1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .workers-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+/* =========================================================
+   SMARTPHONE
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .container{
+    width:calc(100% - 28px);
+  }
+
+  .section{
+    padding:60px 0;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .nav-button{
+    padding:10px 13px;
+    font-size:12px;
+  }
+
+  .hero h1{
+    font-size:58px;
+  }
+
+  .hero-description{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .button{
+    width:100%;
+  }
+
+  .service{
+    grid-template-columns:1fr;
+    gap:7px;
+  }
+
+  .advantages{
+    grid-template-columns:1fr;
+  }
+
+  .advantage{
+    border-right:none;
+    border-bottom:1px solid var(--line);
+  }
+
+  .advantage:last-child{
+    border-bottom:none;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .step{
+    border-right:none;
+    border-bottom:1px solid var(--line);
+  }
+
+  .step:last-child{
+    border-bottom:none;
+  }
+
+  .form-card,
+  .worker-form{
+    padding:20px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .mobile-cta{
+    display:block;
+
+    position:fixed;
+
+    left:12px;
+    right:12px;
+    bottom:12px;
+
+    z-index:2000;
+
+    background:var(--orange);
+
+    color:#151515;
+
+    text-align:center;
+
+    padding:14px;
+
+    border-radius:5px;
+
+    font-size:14px;
+    font-weight:900;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+  }
+
+  body{
+    padding-bottom:70px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#top" class="logo">
+СТАЛЬ<span>.</span>
+</a>
+
+<nav>
+<ul>
+
+<li>
+<a href="#services">Услуги</a>
+</li>
+
+<li>
+<a href="#process">Как работаем</a>
+</li>
+
+<li>
+<a href="#contact">Заявка</a>
+</li>
+
+<li>
+<a href="#workers">Сварщики</a>
+</li>
+
+</ul>
+</nav>
+
+<a href="#contact" class="nav-button">
+Оставить заявку
+</a>
+
+</div>
+
+</header>
+
+
+
+<main id="top">
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="container hero">
+
+<div>
+
+<span class="eyebrow">
+Сварка • Металлоконструкции • Кыргызстан
+</span>
+
+<h1>
+МЕТАЛЛ,<br>
+КОТОРЫЙ<br>
+<span>ДЕРЖИТ.</span>
+</h1>
+
+<p class="hero-description">
+Изготавливаем и устанавливаем сварные
+металлоконструкции под заказ.
+Ворота, заборы, навесы, лестницы,
+каркасы и нестандартные конструкции.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="button button-primary">
+Рассчитать стоимость
+</a>
+
+<a href="#services" class="button button-outline">
+Наши услуги
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-art">
+
+<svg viewBox="0 0 400 400">
+
+<defs>
+
+<linearGradient
+id="steelGradient"
+x1="0"
+y1="0"
+x2="1"
+y2="1">
+
+<stop
+offset="0%"
+stop-color="#ff7a1a"/>
+
+<stop
+offset="100%"
+stop-color="#c95010"/>
+
+</linearGradient>
+
+</defs>
+
+<rect
+x="45"
+y="45"
+width="310"
+height="310"
+rx="5"
+fill="none"
+stroke="#383d3f"
+stroke-width="2"
+/>
+
+<path
+d="M75 310 L200 75 L325 310"
+fill="none"
+stroke="url(#steelGradient)"
+stroke-width="9"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
+
+<line
+x1="115"
+y1="220"
+x2="285"
+y2="220"
+stroke="url(#steelGradient)"
+stroke-width="9"
+stroke-linecap="round"
+/>
+
+<circle
+cx="200"
+cy="75"
+r="10"
+fill="#ff7a1a"
+/>
+
+</svg>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+
+<section id="services" class="section services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="eyebrow">
+Что делаем
+</span>
+
+<h2>
+СВАРКА И МЕТАЛЛОКОНСТРУКЦИИ
+</h2>
+
+<p class="muted">
+Работаем по размерам заказчика.
+Можно прислать фото, эскиз или просто
+описать задачу.
+</p>
+
+</div>
+
+
+<div class="service-list">
+
+
+<div class="service">
+
+<div class="service-number">01</div>
+
+<h3>Ворота</h3>
+
+<p>
+Распашные и откатные ворота,
+калитки, металлические каркасы
+и другие решения.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02</div>
+
+<h3>Навесы</h3>
+
+<p>
+Навесы для автомобилей,
+двора, коммерческих объектов
+и других задач.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">03</div>
+
+<h3>Заборы</h3>
+
+<p>
+Металлические каркасы,
+секции, ограждения и калитки.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">04</div>
+
+<h3>Лестницы</h3>
+
+<p>
+Металлические каркасы лестниц,
+площадки, перила и ограждения.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">05</div>
+
+<h3>Каркасы</h3>
+
+<p>
+Сварные каркасы для помещений,
+бизнеса и частных объектов.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">06</div>
+
+<h3>Другое</h3>
+
+<p>
+Если вашей задачи нет в списке —
+просто опишите её в заявке.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ADVANTAGES
+     ========================================================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="eyebrow">
+Почему СТАЛЬ
+</span>
+
+<h2>
+БЕЗ ЛИШНЕЙ СЛОЖНОСТИ
+</h2>
+
+</div>
+
+
+<div class="advantages">
+
+
+<div class="advantage">
+
+<div class="advantage-number">01</div>
+
+<h3>
+Под размер
+</h3>
+
+<p>
+Изготавливаем конструкцию
+под конкретный объект.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<div class="advantage-number">02</div>
+
+<h3>
+Расчёт
+</h3>
+
+<p>
+Уточняем размеры, материалы,
+сроки и рассчитываем стоимость.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<div class="advantage-number">03</div>
+
+<h3>
+От заявки до монтажа
+</h3>
+
+<p>
+Изготовление, доставка
+и монтаж конструкции.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROCESS
+     ========================================================= -->
+
+<section id="process" class="section">
+
+<div class="container">
+
+<div class="process-box">
+
+<div class="process-header">
+
+<span class="eyebrow">
+Процесс
+</span>
+
+<h2>
+ОТ ЗАЯВКИ ДО ГОТОВОЙ КОНСТРУКЦИИ
+</h2>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">01</div>
+
+<h3>Заявка</h3>
+
+<p>
+Вы оставляете контакты
+и описание задачи.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">02</div>
+
+<h3>Расчёт</h3>
+
+<p>
+Уточняем размеры,
+материалы и сроки.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">03</div>
+
+<h3>Изготовление</h3>
+
+<p>
+Изготавливаем конструкцию
+в сварочном цеху.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">04</div>
+
+<h3>Монтаж</h3>
+
+<p>
+Доставляем и устанавливаем
+конструкцию.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CLIENT FORM
+     ========================================================= -->
+
+<section id="contact" class="section contact">
+
+<div class="container contact-grid">
+
+
+<div class="contact-info">
+
+<span class="eyebrow">
+Заказать работу
+</span>
+
+<h2>
+РАССКАЖИТЕ,<br>
+ЧТО НУЖНО СВАРИТЬ
+</h2>
+
+<p>
+Опишите задачу, укажите регион
+и оставьте любой удобный способ связи.
+Можно оставить телефон, Telegram
+или оба.
+</p>
+
+
+<div class="contact-item">
+
+<small>Телефон</small>
+
+<strong>
++996 ___ ___ ___
+</strong>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>Telegram</small>
+
+<strong>
+@your_username
+</strong>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>Работаем</small>
+
+<strong>
+Кыргызстан
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="form-card">
+
+<h3>
+ЗАЯВКА НА РАБОТУ
+</h3>
+
+<p class="form-description">
+Оставьте контакты — свяжемся с вами
+для уточнения деталей.
+</p>
+
+
+<form id="leadForm">
+
+
+<div>
+
+<label for="clientName">
+Ваше имя *
+</label>
+
+<input
+id="clientName"
+name="name"
+type="text"
+placeholder="Например, Азамат"
+required
+>
+
+</div>
+
+
+<div class="form-row">
+
+<div>
+
+<label for="clientPhone">
+Телефон *
+</label>
+
+<input
+id="clientPhone"
+name="phone"
+type="tel"
+placeholder="+996 ..."
+required
+>
+
+</div>
+
+
+<div>
+
+<label for="clientTelegram">
+Telegram
+</label>
+
+<input
+id="clientTelegram"
+name="telegram"
+type="text"
+placeholder="@username"
+>
+
+</div>
+
+</div>
+
+
+<div>
+
+<label for="clientRegion">
+Регион *
+</label>
+
+<select
+id="clientRegion"
+name="region"
+required
+>
+
+<option value="">
+Выберите регион
+</option>
+
+<option>Бишкек</option>
+<option>Ош</option>
+<option>Чуйская область</option>
+<option>Ошская область</option>
+<option>Иссык-Кульская область</option>
+<option>Нарынская область</option>
+<option>Таласская область</option>
+<option>Джалал-Абадская область</option>
+<option>Баткенская область</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label for="service">
+Что нужно сделать *
+</label>
+
+<select
+id="service"
+name="service"
+required
+>
+
+<option value="">
+Выберите услугу
+</option>
+
+<option>Сварка</option>
+<option>Металлоконструкция</option>
+<option>Ворота</option>
+<option>Навес</option>
+<option>Забор</option>
+<option>Лестница</option>
+<option>Каркас</option>
+<option>Ремонт / сварочные работы</option>
+<option>Другое</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label for="message">
+Опишите задачу
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Размеры, материал, сроки, адрес — всё, что знаете..."
+></textarea>
+
+</div>
+
+
+<div>
+
+<label for="source">
+Откуда вы о нас узнали? *
+</label>
+
+<select
+id="source"
+name="source"
+required
+>
+
+<option value="">
+Выберите источник
+</option>
+
+<option>Instagram</option>
+<option>WhatsApp группа</option>
+<option>Telegram группа</option>
+<option>Lalafo</option>
+<option>Рекомендация / сарафанное радио</option>
+<option>Поиск в интернете</option>
+<option>Увидел рекламу</option>
+<option>Другое</option>
+
+</select>
+
+</div>
+
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+required
+>
+
+<span>
+Согласен(на) на обработку данных
+в соответствии с
+<a href="#privacy">
+политикой конфиденциальности
+</a>.
+</span>
+
+</label>
+
+
+<button
+type="submit"
+class="button button-primary"
+>
+ОТПРАВИТЬ ЗАЯВКУ
+</button>
+
+
+<div
+id="leadStatus"
+class="form-status"
+></div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     НУЖНЫ СВАРЩИКИ
+     ОТДЕЛЬНАЯ ФОРМА
+     ========================================================= -->
+
+<section id="workers" class="section workers">
+
+<div class="container workers-grid">
+
+
+<div>
+
+<span class="eyebrow">
+Работа
+</span>
+
+<h2>
+НУЖНЫ<br>
+СВАРЩИКИ?
+</h2>
+
+<p class="workers-description">
+Ищем сварщиков и специалистов
+для работы с металлоконструкциями.
+Если есть опыт — оставьте анкету,
+и мы свяжемся с вами.
+</p>
+
+<a
+href="#workerForm"
+class="button button-primary"
+>
+ОСТАВИТЬ АНКЕТУ
+</a>
+
+</div>
+
+
+
+<div class="worker-form">
+
+<form id="workerForm">
+
+
+<div>
+
+<label for="workerName">
+Имя *
+</label>
+
+<input
+id="workerName"
+name="name"
+type="text"
+placeholder="Ваше имя"
+required
+>
+
+</div>
+
+
+<div class="form-row">
+
+<div>
+
+<label for="workerPhone">
+Телефон *
+</label>
+
+<input
+id="workerPhone"
+name="phone"
+type="tel"
+placeholder="+996 ..."
+required
+>
+
+</div>
+
+
+<div>
+
+<label for="workerTelegram">
+Telegram
+</label>
+
+<input
+id="workerTelegram"
+name="telegram"
+type="text"
+placeholder="@username"
+>
+
+</div>
+
+</div>
+
+
+<div>
+
+<label for="workerRegion">
+Регион *
+</label>
+
+<select
+id="workerRegion"
+name="region"
+required
+>
+
+<option value="">
+Выберите регион
+</option>
+
+<option>Бишкек</option>
+<option>Ош</option>
+<option>Чуйская область</option>
+<option>Ошская область</option>
+<option>Иссык-Кульская область</option>
+<option>Нарынская область</option>
+<option>Таласская область</option>
+<option>Джалал-Абадская область</option>
+<option>Баткенская область</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label for="workerExperience">
+Опыт работы *
+</label>
+
+<select
+id="workerExperience"
+name="experience"
+required
+>
+
+<option value="">
+Выберите
+</option>
+
+<option>Без опыта</option>
+<option>До 1 года</option>
+<option>1–3 года</option>
+<option>3–5 лет</option>
+<option>Более 5 лет</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label for="workerSpecialization">
+Специализация
+</label>
+
+<input
+id="workerSpecialization"
+name="specialization"
+type="text"
+placeholder="Например: электросварка, полуавтомат..."
+>
+
+</div>
+
+
+<div>
+
+<label for="workerTools">
+Свой инструмент
+</label>
+
+<select
+id="workerTools"
+name="tools"
+>
+
+<option>Есть свой инструмент</option>
+<option>Нет своего инструмента</option>
+<option>Частично есть</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label for="workerComment">
+Комментарий
+</label>
+
+<textarea
+id="workerComment"
+name="comment"
+placeholder="Расскажите немного о себе..."
+></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="button button-primary"
+>
+ОТПРАВИТЬ АНКЕТУ
+</button>
+
+
+<div
+id="workerStatus"
+class="form-status"
+></div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRIVACY
+     ========================================================= -->
+
+<section id="privacy" class="section privacy">
+
+<div class="container privacy-content">
+
+<span class="eyebrow">
+Документы
+</span>
+
+<h2>
+ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+</h2>
+
+<p class="muted">
+Последнее обновление: укажите дату публикации.
+</p>
+
+
+<h3>
+Какие данные собираются
+</h3>
+
+<p>
+При отправке заявки сайт может получать имя,
+номер телефона, Telegram, регион,
+выбранную услугу и описание задачи.
+</p>
+
+
+<h3>
+Зачем используются данные
+</h3>
+
+<p>
+Данные используются для связи с клиентом,
+уточнения задачи, расчёта стоимости
+и обработки заявки.
+</p>
+
+
+<h3>
+Заявки работников
+</h3>
+
+<p>
+Данные из формы «Нужны сварщики»
+используются для связи с кандидатами
+по вопросам работы.
+</p>
+
+
+<h3>
+Хранение
+</h3>
+
+<p>
+После подключения Apps Script данные могут
+передаваться в Google Sheets, Telegram
+и Bitrix24 в соответствии с настройками
+владельца сайта.
+</p>
+
+
+<h3>
+Удаление данных
+</h3>
+
+<p>
+Для запроса на удаление данных пользователь
+может обратиться по контактам,
+указанным на сайте.
+</p>
+
+</div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+© <span id="year"></span>
+СТАЛЬ — сварка и металлоконструкции
+</div>
+
+<a href="#privacy">
+Политика конфиденциальности
+</a>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     МОБИЛЬНАЯ КНОПКА
+     ========================================================= -->
+
+<a
+href="#contact"
+class="mobile-cta"
+>
+ОСТАВИТЬ ЗАЯВКУ
+</a>
+
+
+
+<script>
+
+/* =========================================================
+   =========================================================
+   НАСТРОЙКИ JAVASCRIPT
+   =========================================================
+   ========================================================= */
+
+
+/*
+  ВАЖНО!
+
+  Сюда позже вставляем URL опубликованного
+  Google Apps Script.
+
+  Пока оставляем как есть.
+*/
+
+const APPS_SCRIPT_URL =
+"ВСТАВЬТЕ_СЮДА_URL_ВАШЕГО_APPS_SCRIPT_WEB_APP";
+
+
+
+/* =========================================================
+   ГОД В FOOTER
+   ========================================================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* =========================================================
+   UTM-АНАЛИТИКА
+
+   Пример рекламной ссылки:
+
+   https://site.kg/?utm_source=instagram
+   &utm_medium=cpc
+   &utm_campaign=vorota
+
+   Мы сможем узнать:
+   - откуда пришёл человек;
+   - какая реклама;
+   - какая кампания.
+   ========================================================= */
+
+function getUTMData(){
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  return {
+
+    utm_source:
+      params.get("utm_source") || "",
+
+    utm_medium:
+      params.get("utm_medium") || "",
+
+    utm_campaign:
+      params.get("utm_campaign") || "",
+
+    utm_content:
+      params.get("utm_content") || "",
+
+    utm_term:
+      params.get("utm_term") || ""
+
+  };
+
+}
+
+
+
+/* =========================================================
+   СОХРАНЯЕМ UTM
+   ========================================================= */
+
+function saveUTM(){
+
+  const data =
+    getUTMData();
+
+  const hasData =
+    Object.values(data)
+      .some(value => value !== "");
+
+  if(hasData){
+
+    localStorage.setItem(
+      "steel_utm",
+      JSON.stringify(data)
+    );
+
+  }
+
+}
+
+
+saveUTM();
+
+
+
+/* =========================================================
+   ПОЛУЧАЕМ СОХРАНЁННЫЕ UTM
+   ========================================================= */
+
+function getSavedUTM(){
+
+  try{
+
+    return JSON.parse(
+      localStorage.getItem(
+        "steel_utm"
+      )
+    ) || {};
+
+  }catch(error){
+
+    return {};
+
+  }
+
+}
+
+
+
+/* =========================================================
+   ОТПРАВКА ДАННЫХ В APPS SCRIPT
+   ========================================================= */
+
+async function sendToAppsScript(data){
+
+  /*
+    Если URL ещё не установлен,
+    показываем понятную ошибку.
+  */
+
+  if(
+    !APPS_SCRIPT_URL ||
+    APPS_SCRIPT_URL.includes("ВСТАВЬТЕ")
+  ){
+
+    throw new Error(
+      "URL Apps Script не установлен"
+    );
+
+  }
+
+
+  /*
+    Добавляем к заявке технические данные.
+  */
+
+  const finalData = {
+
+    ...data,
+
+    url:
+      window.location.href,
+
+    page:
+      window.location.pathname,
+
+    referrer:
+      document.referrer || "",
+
+    timestamp:
+      new Date().toISOString(),
+
+    utm:
+      getSavedUTM()
+
+  };
+
+
+  /*
+    Отправляем POST-запрос.
+
+    Apps Script далее сможет:
+    1. записать в Google Sheets;
+    2. отправить Telegram;
+    3. отправить в Bitrix24.
+  */
+
+  await fetch(
+    APPS_SCRIPT_URL,
+    {
+
+      method:"POST",
+
+      mode:"no-cors",
+
+      headers:{
+        "Content-Type":
+        "text/plain;charset=utf-8"
+      },
+
+      body:
+        JSON.stringify(finalData)
+
+    }
+  );
+
+}
+
+
+
+/* =========================================================
+   КЛИЕНТСКАЯ ЗАЯВКА
+   ========================================================= */
+
+const leadForm =
+document.getElementById(
+  "leadForm"
+);
+
+const leadStatus =
+document.getElementById(
+  "leadStatus"
+);
+
+
+leadForm.addEventListener(
+"submit",
+async function(event){
+
+  event.preventDefault();
+
+
+  leadStatus.textContent =
+  "Отправляем заявку...";
+
+  leadStatus.className =
+  "form-status";
+
+
+  /*
+    Собираем данные клиента.
+  */
+
+  const data = {
+
+    action:"lead",
+
+    type:"client",
+
+    name:
+      document.getElementById(
+        "clientName"
+      ).value.trim(),
+
+    phone:
+      document.getElementById(
+        "clientPhone"
+      ).value.trim(),
+
+    telegram:
+      document.getElementById(
+        "clientTelegram"
+      ).value.trim(),
+
+    region:
+      document.getElementById(
+        "clientRegion"
+      ).value,
+
+    service:
+      document.getElementById(
+        "service"
+      ).value,
+
+    message:
+      document.getElementById(
+        "message"
+      ).value.trim(),
+
+    source:
+      document.getElementById(
+        "source"
+      ).value
+
+  };
+
+
+  try{
+
+    await sendToAppsScript(
+      data
+    );
+
+
+    leadStatus.textContent =
+    "Заявка отправлена! Мы свяжемся с вами.";
+
+    leadStatus.className =
+    "form-status ok";
+
+
+    leadForm.reset();
+
+
+  }catch(error){
+
+    console.error(error);
+
+
+    leadStatus.textContent =
+    "Не удалось отправить заявку. Проверьте подключение или свяжитесь с нами напрямую.";
+
+    leadStatus.className =
+    "form-status error";
+
+  }
+
+});
+
+
+
+/* =========================================================
+   АНКЕТА СВАРЩИКА
+   ========================================================= */
+
+const workerForm =
+document.getElementById(
+  "workerForm"
+);
+
+const workerStatus =
+document.getElementById(
+  "workerStatus"
+);
+
+
+workerForm.addEventListener(
+"submit",
+async function(event){
+
+  event.preventDefault();
+
+
+  workerStatus.textContent =
+  "Отправляем анкету...";
+
+  workerStatus.className =
+  "form-status";
+
+
+  /*
+    Собираем данные сварщика.
+  */
+
+  const data = {
+
+    action:"worker",
+
+    type:"worker",
+
+    name:
+      document.getElementById(
+        "workerName"
+      ).value.trim(),
+
+    phone:
+      document.getElementById(
+        "workerPhone"
+      ).value.trim(),
+
+    telegram:
+      document.getElementById(
+        "workerTelegram"
+      ).value.trim(),
+
+    region:
+      document.getElementById(
+        "workerRegion"
+      ).value,
+
+    experience:
+      document.getElementById(
+        "workerExperience"
+      ).value,
+
+    specialization:
+      document.getElementById(
+        "workerSpecialization"
+      ).value.trim(),
+
+    tools:
+      document.getElementById(
+        "workerTools"
+      ).value,
+
+    comment:
+      document.getElementById(
+        "workerComment"
+      ).value.trim()
+
+  };
+
+
+  try{
+
+    await sendToAppsScript(
+      data
+    );
+
+
+    workerStatus.textContent =
+    "Анкета отправлена! Мы свяжемся с вами.";
+
+    workerStatus.className =
+    "form-status ok";
+
+
+    workerForm.reset();
+
+
+  }catch(error){
+
+    console.error(error);
+
+
+    workerStatus.textContent =
+    "Не удалось отправить анкету. Проверьте подключение.";
+
+    workerStatus.className =
+    "form-status error";
+
+  }
+
+});
+
+</script>
+
+
+</body>
+</html>
+```
